@@ -9,8 +9,8 @@ public class admin extends AbstractUser{
     @Override
     protected void changeMdpClient() {}
     public Client chercherUtilisateur() { return null; }
-    public void ajouterLivre() { /* will call LivreService */ }
-    public void supprimerLivre() { /* will call LivreService */ }
-    public void blockerClient() { /* will call UserService */ }
-    public void changerMdpAdmin() { /* to implement */ }
+    public void ajouterLivre() { /*  nchalah*/ }
+    public void supprimerLivre() { /* nchalah */ }
+    public void blockerClient() { /* nchalah */ }
+    public void changerMdpAdmin() { /* nchalah */ }
 }

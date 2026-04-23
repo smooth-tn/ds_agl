@@ -1,0 +1,79 @@
+@startuml
+
+' =======================
+' PARAMETRES D'AFFICHAGE
+' =======================
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+
+' =======================
+' CLASSES PRINCIPALES
+' =======================
+
+class Utilisateur {
+  -id: int
+  -nom: String
+  -email: String
+  -motDePasse: String
+  +seConnecter()
+  +seDeconnecter()
+}
+
+class Visiteur {
+  +rechercherLivre()
+  +consulterCatalogue()
+}
+
+class Bibliothecaire {
+  +emprunterLivre()
+  +retournerLivre()
+  +gererEmprunts()
+}
+
+class Administrateur {
+  +ajouterLivre()
+  +supprimerLivre()
+  +gererUtilisateurs()
+}
+
+class Livre {
+  -id: int
+  -titre: String
+  -auteur: String
+  -disponible: boolean
+  +verifierDisponibilite()
+}
+
+class Emprunt {
+  -id: int
+  -dateEmprunt: Date
+  -dateRetour: Date
+  +creerEmprunt()
+  +cloturerEmprunt()
+}
+
+class Catalogue {
+  +rechercherLivre()
+  +listerLivres()
+}
+
+' =======================
+' HERITAGE
+' =======================
+Visiteur --|> Utilisateur
+Bibliothecaire --|> Utilisateur
+Administrateur --|> Bibliothecaire
+
+' =======================
+' RELATIONS
+' =======================
+
+Utilisateur "1" -- "0..*" Emprunt : effectue >
+Livre "1" -- "0..*" Emprunt : concerne >
+
+Catalogue "1" o-- "0..*" Livre : contient >
+Visiteur --> Catalogue : consulte >
+Bibliothecaire --> Livre : gere >
+Administrateur --> Livre : administre >
+
+@enduml

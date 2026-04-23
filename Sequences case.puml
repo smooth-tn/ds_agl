@@ -1,0 +1,38 @@
+@startuml
+
+title Diagramme de Séquence - Emprunter un livre
+
+actor "Utilisateur" as U
+participant "Interface" as I
+participant "Catalogue" as C
+participant "ServiceEmprunt" as S
+participant "BaseDeDonnees" as DB
+
+' =======================
+' SCENARIO
+' =======================
+
+U -> I : rechercherLivre(titre)
+I -> C : rechercherLivre(titre)
+C -> DB : SELECT livre
+DB --> C : listeLivres
+C --> I : resultat
+I --> U : afficher resultats
+
+U -> I : demanderEmprunt(livre)
+I -> S : verifierDisponibilite(livre)
+
+S -> DB : checkDisponibilite
+DB --> S : disponible / non
+
+alt livre disponible
+    S -> DB : creerEmprunt()
+    DB --> S : confirmation
+    S --> I : succes
+    I --> U : "Livre emprunté"
+else livre non disponible
+    S --> I : echec
+    I --> U : "Non disponible"
+end
+
+@enduml

@@ -10,7 +10,7 @@ public class Compte {
         else throw new NullPasswordException();
     }
     public void setEmail(String email) {
-        if(!email.isEmpty()) this.email = email;
+        if(EmailValidation.isValidEmail(this.email)) this.email = email;
         else throw new EmptyEmailException();
     }
     public void setClient() {isClient = true;}

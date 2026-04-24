@@ -2,7 +2,7 @@ package modele;
 
 public class admin extends AbstractUser{
     public admin(int id,String userName,String email,String motDepass){
-        super(id, userName,email,motDepass);
+        super(id, userName,email);
     }
     @Override
     protected Livre rechercheLivre() {return null;}

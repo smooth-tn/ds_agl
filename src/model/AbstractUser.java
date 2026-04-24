@@ -3,13 +3,12 @@ package modele;
 public abstract class AbstractUser {
     protected  int id;
     protected String userName;
-    protected String motDepass;
+
     protected String email;
-    public AbstractUser(int id,String userName,String email,String motDepass){
+    public AbstractUser(int id,String userName,String email,String ){
         this.id=id;
         this.userName=userName;
         this.email=email;
-        this.motDepass=motDepass;
     }
 
     public int getId() {return id;}

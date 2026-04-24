@@ -8,7 +8,7 @@ public class Client extends AbstractUser{
     private int empruntCont=0;
 
     public Client(int id,String userName,String email,String motDepass){
-        super(id, userName,email,motDepass);
+        super(id, userName,email);
         this.panier=new ArrayList<>();
     }
     public void setBlocked() {isBlocked = true;}

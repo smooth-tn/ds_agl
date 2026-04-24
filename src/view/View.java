@@ -26,10 +26,11 @@ public class View {
         System.out.println("\n=== Menu Administrateur ===");
         System.out.println("Bienvenue administrateur !");
         System.out.println("1. Bloquer un client");
-        System.out.println("2. Ajouter un livre");
-        System.out.println("3. Supprimer un livre");
-        System.out.println("4. Voir le nombre total de livres dans la BD");
-        System.out.println("5. Se déconnecter");
+        System.out.println("2. Debloquer un client");
+        System.out.println("3. Ajouter un livre");
+        System.out.println("4. Supprimer un livre");
+        System.out.println("5. Voir le nombre total de livres dans la BD");
+        System.out.println("6. Se déconnecter");
         System.out.print("Votre choix : ");
     }
 

@@ -61,7 +61,7 @@ public class LivreDAO {
         }
     }
 
-    public ArrayList<Livre> consulterToutLesLivres(){
+    public List<Livre> consulterToutLesLivres(){
 
         ArrayList<Livre> livres = new ArrayList<Livre>();
         try{

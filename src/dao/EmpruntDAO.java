@@ -1,5 +1,7 @@
 package dao;
 
+import model.*;
+
 import java.sql.Connection;
 
 public class EmpruntDAO {

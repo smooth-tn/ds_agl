@@ -7,6 +7,13 @@ public class Livre {
     private String auteur;
     private String categorie;
     private boolean isDispo;
+
+    public Livre(String Titre,String auteur,String categorie){
+        this.Titre=Titre;
+        this.auteur=auteur;
+        this.categorie=categorie;
+    }
+
     public Livre(int id,String Titre,String auteur,String categorie,boolean isDispo,int jour,int month,int year){
         this.id=id;
         this.Titre=Titre;

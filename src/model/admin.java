@@ -1,7 +1,7 @@
 package model;
 
-public class admin extends AbstractUser{
-    public admin(int id,String userName,String email,String motDepass){
+public class Admin extends AbstractUser{
+    public Admin(int id,String userName,String email){
         super(id, userName,email);
     }
     @Override

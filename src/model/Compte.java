@@ -17,7 +17,7 @@ public class Compte {
     public void setClient() {isClient = true;}
     public void setUserName(String name){this.userName=name;}
     
-    public String getUserName(){return userName;}
+    public String getUsername(){return userName;}
     public boolean getIsClient(){return isClient;}
     public String getEmail() {return email;}
     public String getMotDePass() {return motDePass;}

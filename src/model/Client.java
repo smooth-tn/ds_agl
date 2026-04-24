@@ -7,7 +7,7 @@ public class Client extends AbstractUser{
     private ArrayList<Livre> panier;
     private int empruntCont=0;
 
-    public Client(int id,String userName,String email,String motDepass){
+    public Client(int id,String userName,String email){
         super(id, userName,email);
         this.panier=new ArrayList<>();
     }

@@ -1,4 +1,4 @@
-package modele;
+package model;
 
 public abstract class AbstractUser {
     protected  int id;

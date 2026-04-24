@@ -1,3 +1,4 @@
+package tests;
 
 //  THIS CLASS IS INTENDED FOR MANUAL TESTING ONLY (NOT FOR REAL LOGIC !)
 //  DO NOT CALL THIS CLASS OUTSIDE THIS PACKAGE 
@@ -6,6 +7,7 @@
 final class MainTest{
     public static void main(String args[]){
         // EXECUTE BUISNESS LOGIC METHODS HERE
+        // TEST DB CONNECTION HERE ??
     }
 
     // IMPLEMENT THE TESTING HERE

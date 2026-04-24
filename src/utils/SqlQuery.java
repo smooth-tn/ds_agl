@@ -1,4 +1,4 @@
-package modele;
+package utils;
 
 public class SqlQuery {
 }

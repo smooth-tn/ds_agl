@@ -5,6 +5,7 @@ CREATE TABLE CLIENT(
     username VARCHAR (50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     email VARCHAR (50) UNIQUE,
+    isBlocked BOOLEAN DEFAULT TRUE,
     creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

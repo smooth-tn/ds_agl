@@ -1,4 +1,4 @@
-package modele;
+package model;
 
 public class NullPasswordException extends RuntimeException {
     public NullPasswordException() {

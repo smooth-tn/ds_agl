@@ -3,6 +3,7 @@ package model;
 public class Compte {
     private String email;
     private String motDePass;
+    private String userName;
     private boolean isClient=false;
 
     public void setMotDePass(String motDePass) {
@@ -14,7 +15,9 @@ public class Compte {
         else throw new EmptyEmailException();
     }
     public void setClient() {isClient = true;}
-
+    public void setUserName(String name){this.userName=name;}
+    
+    public String getUserName(){return userName;}
     public boolean getIsClient(){return isClient;}
     public String getEmail() {return email;}
     public String getMotDePass() {return motDePass;}
